@@ -4,3 +4,5 @@ https://drive.google.com/drive/folders/1mq27LHTkeNJDBl8Goz4nCXy8hle4qoHA
 
 -youtube
 https://www.youtube.com/@codebasic-ai
+
+-layers.Conv2D(, kernel_size(5, 5), padding='same') ##kernel_size, padding 개념
