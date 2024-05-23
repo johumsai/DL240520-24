@@ -8,3 +8,7 @@ https://www.youtube.com/@codebasic-ai
 -layers.Conv2D(, kernel_size(5, 5), padding='same') ##kernel_size, padding 개념
 
 -모델을 훈련시킬때[model.fit(,,,,callbacks=[])] epoch별로 최상의 epoch번호를 출력할 수 있다 : chatgpt활용
+
+-모델개발 프로젝트 진행시 : 사전모델 최대한 활용해야 시간이나, 성능을 향상시킬 수 있다.
+
+-유럽쪽 공개/공유 모델 사이트 : https://huggingface.co/meta-llama/Meta-Llama-3-8B
