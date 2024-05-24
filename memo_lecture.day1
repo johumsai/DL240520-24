@@ -26,3 +26,9 @@ https://www.youtube.com/@codebasic-ai
  1) tensorflow
 
 -lstm vs gru : gru가 lstm보다 최신 모델
+ *둘의 차이 : gru에서 반드시 설정해야 하는 값 "return_sequenes = True"
+  =>이유 : 
+
+-정상데이터가 대부분인 경우, 상대적으로 비정상데이터가 극소수일때 사용할 수 있는 모델
+ *skilearn의 "oneClassSVM(gamma='auto').fit(x) / fit(x) : no target(unsupervised), 목표값(y)이 없이 학습을 시킨다.
+
