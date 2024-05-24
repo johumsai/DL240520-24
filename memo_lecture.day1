@@ -32,6 +32,12 @@ https://www.youtube.com/@codebasic-ai
 -정상데이터가 대부분인 경우, 상대적으로 비정상데이터가 극소수일때 사용할 수 있는 모델
  *skilearn의 "oneClassSVM(gamma='auto').fit(x) / fit(x) : no target(unsupervised), 목표값(y)이 없이 학습을 시킨다.
 
+-layer의 입력이 가변적인 경우(e.g. 자연어) 
+ *keras.Input(shape=(None,)) #shape=(None,)처럼 'None'으로 하면 가변적인 것으로 지정한다.
+-자연어 처리 : RNN이 적합함
+-자연어 처리를 위해서는 입력을 tensor로 구성해야 한다(아래)
+ *keras.preprocessing.sequence.pad_sequence(train_text, max_len500) : text는 가변적(tensor가 아님)이라, text들의 길이를 동일하게 맞춰줘야 한다.
+ *여기서는 최대값인 500으로 설정하고 있어서, 500길이가 아닌 text들은 나머지 부분은 0으로 채워진다. 즉 빈칸으로 채워진다.
 
 [합성곱에서 이미지 학습하는 원리 on chatGPT3.5, May 24, 2024. at multicampus academy center]
 -합성곱 신경망(Convolutional Neural Network, CNN)은 이미지 학습에 매우 효과적인 딥러닝 모델입니다. 이 모델은 이미지 내의 패턴과 특징을 탐지하기 위해 일련의 합성곱 레이어와 풀링 레이어로 구성됩니다. 이 과정은 이미지를 입력으로 받아들이고, 그 이미지에서 특정 패턴이나 특징을 추출하여 출력으로 내보내는 것으로 이해할 수 있습니다.
