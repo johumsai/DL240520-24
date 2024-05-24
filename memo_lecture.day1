@@ -24,3 +24,5 @@ https://www.youtube.com/@codebasic-ai
 
 -gpu-based 모델
  1) tensorflow
+
+-lstm vs gru : gru가 lstm보다 최신 모델
