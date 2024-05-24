@@ -39,6 +39,18 @@ https://www.youtube.com/@codebasic-ai
  *keras.preprocessing.sequence.pad_sequence(train_text, max_len500) : text는 가변적(tensor가 아님)이라, text들의 길이를 동일하게 맞춰줘야 한다.
  *여기서는 최대값인 500으로 설정하고 있어서, 500길이가 아닌 text들은 나머지 부분은 0으로 채워진다. 즉 빈칸으로 채워진다.
 
+-RNN Encoder Decoder : 번역을 위한 모델
+ *1)RNNencdec(2014년) : 고정길이에 적합, 문장의 길이가 길어지면 정확도가 급락하는 문제
+ *2)RNNSearch(2015년) : 1)에 비하여 길이가 길어져도 정확도를 일정하게 유지
+ *3)seft attention annotation : layers.Bidirectional(layers.GRU(32)) #Bidirectional은 TEXT를 양방향으로 읽어서 정확도가 향상됨/과적합이 감소되는 효과가 있음
+  =>BiGRU
+-RNN Encoder Decoder vs GRU : GRU는 2014년에 출시
+
+-transformer(2017년) : rnn의 attention을 추가한 형태로, 더이상 rnn이 필요없게되는 결과를 낳음, 즉 transformer에서는 rnn을 제거한 형태임
+ *transformer는 feed forward(Dense layer), attention만 있는 구조임
+ *chatGPT는 transformer에서 탄생했다.
+
+
 [합성곱에서 이미지 학습하는 원리 on chatGPT3.5, May 24, 2024. at multicampus academy center]
 -합성곱 신경망(Convolutional Neural Network, CNN)은 이미지 학습에 매우 효과적인 딥러닝 모델입니다. 이 모델은 이미지 내의 패턴과 특징을 탐지하기 위해 일련의 합성곱 레이어와 풀링 레이어로 구성됩니다. 이 과정은 이미지를 입력으로 받아들이고, 그 이미지에서 특정 패턴이나 특징을 추출하여 출력으로 내보내는 것으로 이해할 수 있습니다.
 
